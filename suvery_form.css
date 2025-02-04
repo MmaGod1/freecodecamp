@@ -1,104 +1,89 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-  background: url("https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg");
-  background-size: cover;
+  background-image: url("https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg");
   background-position: center;
   background-repeat: no-repeat;
-  width: 100%;
+  color: #fff;
   height: 100vh;
+  width: 100%;
   font-size: 16px;
   font-family: "Lora", serif;
   margin: 0;
+  padding: 0;
 }
 
 body::before {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background-color: rgba(63, 81, 181, 0.7);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
   z-index: -1;
 }
 
 #title {
-  font-size: 20px;
   text-align: center;
-  color: #fff;
+  font-size: 20px;
 }
 
 #description {
   text-align: center;
+  padding: 0 20px;
   color: #fff;
+  opacity: 0.7;
   font-style: italic;
   font-weight: 10;
-  opacity: 0.7;
-  margin: 1em;
 }
 
 h2 {
   font-size: 15px;
-  padding: 0;
-  margin: 0;
+  font-weight: 20;
 }
 
 #survey-form {
-  width: 100%;
-  font-size: 7px;
+  width: 75vw;
   max-width: 800px;
   min-width: 200px;
-  padding: 0;
   margin: 0 auto;
+  font-size: 7px;
 }
 
 fieldset {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  background-color: #1b1b32;
-  color: #fff;
-  border: 0;
-  margin: 0 45px;
-  padding: 20px 20px 0 20px;
+  border: none;
+  background-color: rgba(27, 27, 50, 0.8);
+  padding: 0 15px 0 15px;
+}
+
+fieldset:last-of-type {
+  padding: 0 15px 25px 15px;
 }
 
 label {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  align-items: flex-start;
+  display: block;
+  margin: 0.5rem 0;
 }
 
-label:has(.inline) {
-  flex-direction: row;
-  align-items: center;
-  gap: 5px;
+.inline {
+  width: unset;
+  vertical-align: middle;
+  margin: 0 0.1em 0 0;
+  transform: scale(0.7);
 }
 
 input,
 select,
 textarea {
+  margin: 3px 0 0 0;
   width: 100%;
-  margin: 5px 0 0 0;
-  border: 0;
-  box-sizing: border-box;
-  border-radius: 5px;
-}
-
-.inline {
-  width: unset;
-  margin: 0 0.2em 0 0;
-  align-self: flex-start;
-  transform: scale(0.7);
-}
-
-#dropdown,
-#fav-feature,
-::placeholder {
-  font-size: 5px;
-  padding: 5px;
+  border: 2px solid #fff;
+  border-radius: 2px;
 }
 
 input:focus,
@@ -107,6 +92,13 @@ select:focus {
   outline: none;
   box-shadow: 0 0 3px rgba(0, 102, 255, 0.5);
   border: 1.2px solid rgba(0, 102, 255, 0.4);
+}
+
+#dropdown,
+#fav-feature,
+::placeholder {
+  font-size: 5px;
+  padding: 5px 0;
 }
 
 input[type="submit"] {
