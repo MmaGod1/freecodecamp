@@ -47,6 +47,3 @@ To view this project locally:
 1. Clone or download the repository.
 2. Open the `index.html` file in your preferred browser to see the tribute page in action.
 
-## Conclusion
-
-This project helped me practice structuring a webpage with semantic HTML, applying CSS for layout and design, and ensuring responsiveness for various devices. It also reinforced my understanding of how to present information clearly and visually in a tribute format.
