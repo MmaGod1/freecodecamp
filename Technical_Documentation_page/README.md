@@ -15,10 +15,8 @@ The technical documentation page includes the following key features:
 
 ## What I Learned
 
-- **Semantic HTML**: Used tags like `<nav>`, `<main>`, `<section>`, and `<code>` for better structure and accessibility.
 - **Flexbox Layout**: Styled the initial version of the page using Flexbox to achieve a responsive and structured layout.
 - **Positioning Techniques**: In a second version of the page, I implemented layout using positioning properties to experiment with different styling approaches.
-- **CSS Styling**: Applied margins, paddings, text styling, and layout controls to create a clean, readable interface.
 - **Navigation and Linking**: Implemented internal linking using `id` attributes and anchor tags for smooth navigation between sections.
 
 ## Files
