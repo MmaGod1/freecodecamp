@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eee;
+  width: 100%;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #000;
+}
+
+/* Navbar section */
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  background-color: #eee;
+}
+
+#header-img {
+  width: 12em;
+  height: auto;
+}
+
+#nav-bar {
+  padding: 20px;
+}
+
+#nav-bar ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+#nav-bar .nav-link {
+  text-decoration: none;
+  color: #000;
+  font-size: 10px;
+}
+
+/* top section */
+h1 {
+  padding: 0 5px;
+}
+.top-section {
+  text-align: center;
+  margin: 10px 0 80px 0;
+}
+
+#form input {
+  display: block;
+  margin: 10px auto;
+  padding: 5px;
+}
+
+#form #email:focus {
+  box-shadow: none;
+  outline: 1px solid #000;
+}
+
+#submit {
+  background-color: #ffd300;
+  border: none;
+  border-radius: 3px;
+  width: 150px;
+  padding: 5px 15px;
+  font-weight: bolder;
+  outline: none;
+}
+
+#submit:hover,
+#submit:active {
+  background-color: orange;
+}
+
+/* Feature section */
+.feature {
+  width: 90%;
+  margin: 40px 30px;
+}
+
+.feature i {
+  color: #ffa700;
+  margin: 10px 0;
+}
+
+/* Video section */
+.iframe-container {
+  width: 70%;
+  height: auto;
+  margin: 30px auto;
+}
+
+.iframe-container #video {
+  width: 100%;
+  height: auto;
+}
+
+/* Pricing section */
+#pricing {
+  margin: 40px 0;
+}
+
+#pricing .prices {
+  width: 70%;
+  text-align: center;
+  margin: 20px auto;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+#pricing .prices h3 {
+  background-color: #dfdfe2;
+  padding: 10px 0;
+}
+
+#pricing .prices span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#pricing .prices p {
+  margin: 6px 0;
+}
+
+#pricing .prices p:first-of-type {
+  margin: 15px 0;
+}
+
+.btn {
+  padding: 10px 25px;
+  margin: 15px 0;
+  background-color: #ffd300;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn:active,
+.btn:focus {
+  background-color: orange;
+  outline: none;
+}
+
+/* footer */
+footer {
+  background-color: #dfdfe2;
+  margin: 40px 0;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.footer-links a {
+  margin: 20px;
+  text-decoration: none;
+  color: #000;
+}
+
+small {
+  font-size: 6px;
+}
+
+/* For screens ≥ 768px */
+@media (min-width: 768px) {
+  main {
+    max-width: 970px;
+    margin: 0 auto;
+    padding: 0 5px;
+  }
+
+  /* features */
+  .feature {
+    width: 100%;
+
+    margin: 40px;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    column-gap: 50px;
+    align-items: center;
+  }
+
+  /* Video */
+  .iframe-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .iframe-container #video {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  /* Pricing section */
+  #pricing {
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 15px;
+  }
+
+  #pricing .prices {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  /* footer */
+  footer {
+    max-width: 970px;
+    margin: 0 auto;
+    display: grid;
+    justify-content: flex-end;
+  }
+}
