@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+html {
+      scroll-behavior: smooth;
+  }
+
 body {
   font-family: Poppins, sans-serif;
   color: var(--white-color);
@@ -127,6 +131,37 @@ body {
   border-radius: 0 0 3px 3px;
 }
 
+.project-link p {
+  position: relative;
+  font-family: monospace;
+  transition: all 0.3s ease;
+}
+
+/* Add < and > only on hover */
+.project-link p::before,
+.project-link p::after {
+  color: #ff7f50;
+  font-size: 14px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-link p::before {
+  content: "<";
+  margin-right: 4px;
+}
+
+.project-link p::after {
+  content: ">";
+  margin-left: 4px;
+}
+
+.project-link:hover p::before,
+.project-link:hover p::after {
+  opacity: 1;
+}
+
 #show-all {
   background-color: var(--dark-gray);
   color: var(--white-color);
@@ -223,6 +258,27 @@ footer .disclaimer {
     width: 100%;
     height: 350px;
     object-fit: cover; /* Makes the image fills the box, cropping if necessary */
+  }
+
+  .nav-link {
+    font-size: 0.875rem;
+  }
+
+  #welcome-section p {
+    font-size: 1.125rem;
+  }
+
+  .desc p {
+    font-size: 0.75rem;
+  }
+
+  .contact-link a,
+  .contact-link .fab {
+    font-size: 0.75rem;
+  }
+
+  footer .disclaimer {
+    font-size: 0.875rem;
   }
 }
 
