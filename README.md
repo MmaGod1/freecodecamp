@@ -1,4 +1,4 @@
-# My solution to freecodecamp's `Certificate Project`
+# My solution to freeCodeCamp's `Certificate Project`
 
 ## Reflection
 
