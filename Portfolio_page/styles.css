@@ -12,8 +12,8 @@
 }
 
 html {
-      scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: Poppins, sans-serif;
@@ -21,20 +21,13 @@ body {
 }
 
 /* Nav bar */
-#header {
+#navbar {
   background-color: var(--red-color);
   width: 100vw;
   height: 3rem;
-  padding: 0;
   position: fixed;
   top: 0;
-}
-
-#navbar {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  padding-right: 10px;
+  padding: 0;
 }
 
 #navbar ul {
@@ -42,6 +35,7 @@ body {
   justify-content: flex-end;
   list-style: none;
   width: 100%;
+  height: 100%;
   padding: 0;
   margin: 0;
 }
@@ -50,7 +44,9 @@ body {
   text-decoration: none;
   color: var(--white-color);
   font-size: 10px;
-  padding: 1rem;
+  padding: 0 1rem;
+  line-height: 3rem; /* Same as navbar height */
+  display: inline-block;
 }
 
 #navbar .nav-link:hover,
@@ -170,6 +166,7 @@ body {
   padding: 0.5rem 1rem;
   border-radius: 2px;
   text-decoration: none;
+  transition: background-color 2s;
 }
 
 #show-all:hover,
