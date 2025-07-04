@@ -3,7 +3,7 @@ const closeBtn = document.getElementById("close-btn");
 const lightBoxImg = document.getElementById("lightbox-image");
 const thumbnails = document.querySelectorAll(".gallery-item");
 
-function popImage(image) {
+function openImage(image) {
   const fullImgSrc = image.src.replace("-thumbnail", "");
   lightBoxImg.src = fullImgSrc;
   lightBox.style.display = "flex";
@@ -13,8 +13,8 @@ function closeImage() {
   lightBox.style.display = "none";
 }
 
-thumbnails.forEach(image => {
-  image.addEventListener("click", () => popImage(image));
+thumbnails.forEach((image) => {
+  image.addEventListener("click", () => openImage(image));
 });
 
 closeBtn.addEventListener("click", closeImage);
