@@ -9,10 +9,14 @@ function countCharacters(input) {
    input.target.value = input.target.value.slice(0, 50);
    count = 50
  }
- countChar.innerHTML = `Character Count: ${count}/50`;
+ countChar.innerText = `Character Count: ${count}/50`;
  
- if (count => 50) {
-   countChar.style.color = "red";
+ if (count >= 50) {
+   countChar.className = "error";
+ } else if(count >= 40) {
+   countChar.className = "warning";
+ } else {
+   countChar.className = "";
  }
 }
 
