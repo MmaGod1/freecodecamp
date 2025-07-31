@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title><span>Palindrome</span></span> Checker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <h1>How many Palindromes do you know?</h1>
+    <form>
+      <label for="text"
+        >Lets check!
+        <input id="text-input" />
+      </label>
+      <div>
+        <p id="result"></p>
+      </div>
+      <button id="check-btn" type="submit">Find Out</button>
+    </form>
+
+    <section class="info">
+      <p>
+        💡 A <span>Palindrome</span> is a word or sentence that's spelled the
+        same way both forward and backward, ignoring punctuation, case, and
+        spacing.
+      </p>
+    </section>
+    <script>
+      const button = document.getElementById("check-btn");
+      const input = document.getElementById("text-input");
+      const result = document.getElementById("result");
+
+      function check(event) {
+        event.preventDefault();
+        if (input.value.trim() === "") {
+          alert("Please input a value.");
+          return;
+        }
+
+        const cleanInput = input.value.replace(/[^a-z0-9]/gi, "").toLowerCase();
+        // console.log(cleanInput);
+
+        const reversedInput = cleanInput.split("").reverse().join("");
+        // console.log(reversedInput);
+
+        if (cleanInput === reversedInput) {
+          result.textContent = `${input.value} is a palindrome`;
+        } else {
+          result.textContent = `${input.value} is not a palindrome`;
+        }
+
+        input.value = "";
+      }
+
+      button.addEventListener("click", check);
+    </script>
+  </body>
+</html>
