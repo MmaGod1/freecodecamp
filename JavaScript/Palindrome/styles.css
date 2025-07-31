@@ -54,6 +54,10 @@ label {
   outline: none;
 }
 
+#result {
+  margin: 15px 0;
+}
+
 #check-btn {
   width: 100px;
   padding: 10px;
